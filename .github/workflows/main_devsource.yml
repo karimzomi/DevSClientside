@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'DevSource'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0D0C7A793CF4865AA74484F659A39A0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_40D8E57441D24A53A9E59B1517C6069E }}
           package: .
