@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+body{
+    background-color:black;
+
+    
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image:linear-gradient(180deg, rgba(0,0,0,1) 0% ,rgba(255,255,255,0) 20%,rgba(255,255,255,0) 80%,rgba(0,0,0,1) 100%), url('https://images.unsplash.com/photo-1547954575-855750c57bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') ;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+:root{
+    --Color:#e10c4a;
+    --Background:#131118;
+    --Component:#1c1924;
+    --Color2:#f34576;
+    --Text:#a0a0a0;
+}
+.shadow{
+    box-shadow: 0px 0px 10px white;
+}
+.icons{
+    font-size: x-large;
+}
+
+
+
+.highlighted{
+    border: 1px solid  var(--Color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+.highlighted:hover{
+    border-radius: 5px;
+    background-color:var(--Color);
+}
+
+
+.content{
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.content h1{
+    background-image: linear-gradient(90deg,var(--Color) 0%,var(--Color2) 100%);
+    text-shadow: 0px 0px 10px var(--Color) ;
+    font-size: 4rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content p{
+    margin: 10px 0px;
+    font-size: 1.5rem;
+    max-width: 75%;
+}
+.content .btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .btns a{
+    color: white;
+    font-size: 1.25rem;
+    max-width: 200px;
+}
+.content .btns .btn-underline{
+    padding: 0.25rem;
+    position: relative;
+    color:var(--Color);
+
+}
+.content .btns .btn-underline::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    background:linear-gradient(90deg,var(--Color) 0%,#f34576 100%);
+    transition: transform 0.3s linear;
+    
+}
+.content .btns .btn-underline:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+@media screen and (max-width:400px){
+    .content p{
+        font-size: 1rem;
+    }
+    .content h1{
+        font-size: 3rem;
+    }
+    .content .btns a{
+        font-size: 1rem;
+    }
+}

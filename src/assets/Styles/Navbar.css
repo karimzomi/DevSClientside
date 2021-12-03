@@ -1,0 +1,219 @@
+.navbar{
+    background-color: var(--Component);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--Color);
+    z-index: 99;
+    padding: 1rem;
+    position: relative;
+}
+.navbar .logo{
+    color: white;
+    text-align: center;
+    margin: 0 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-size:1.5rem;
+    flex: 2;
+    
+}
+.navbar ul{
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex: 3 0 200px;
+}
+.navbar ul a{
+    font-size: 1.25rem;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 5px;
+} 
+
+ .navitems-effect{
+    position: relative;
+    
+}
+.selected_nav{
+   color: var(--Color);
+   text-shadow: 0px 0px  10px  var(--Color);
+}
+ .navitems-effect::before{
+    content: '';
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    transform: scaleX(0);
+    bottom: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+} 
+ .navitems-effect:hover::before{
+    transform: scaleX(1.1);
+}
+.navbar .Hamburger{
+    display: none;
+    margin: 0 1rem;
+    font-size: large;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: center;
+}
+.navbar .search{
+flex: 2 0 150px;
+display: flex;
+border: 1px solid var(--Color);
+border-radius:150px;
+}
+ .navbar .search:hover{
+    box-shadow: 0px 0px 10px var(--Color);
+}
+.Focus-input{
+    box-shadow: 0px 0px 10px var(--Color);
+
+}
+.navbar .search input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0.5em;
+    width: 100%;
+}
+.navbar .search button{
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border: none;
+    border-left:1px solid  var(--Color);
+    padding: 0.5rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+}
+.navbar .search button:hover{
+    background-color:#2f2a3c;
+}
+.navbar .search button:focus{
+    outline: none;
+}
+.navbar .search label{
+    text-align: center;
+    margin: auto;
+    padding: 0 0.5rem;
+    color: white;
+}
+.navbar .search input:focus{
+    outline: none;
+}
+@media screen and (max-width:910px){
+    .navbar{
+        flex-wrap: wrap;
+        top: 0;
+
+    }
+   
+    .navbar ul{
+        position: fixed;
+        top: 100%;
+        height:100vh;
+        z-index: 1;
+        padding: 10rem 0;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        justify-content: space-evenly;
+        background-color: var(--Component);        
+        box-shadow: inset 0px 2px 20px ;
+        flex-direction: column;
+        width: 25vh;
+        transition: transform 0.5s ease;
+
+    }
+   
+    .navbar ul a{
+        font-size: 1.75rem;
+        width: 80%;
+       color: white;
+    }
+
+    .navbar .logo{
+        flex:0 1 10px;
+    }
+    .navbar .search{
+        flex:1 0 200px;
+        max-width: 400px;
+    }
+   
+    .navbar .ul_phone{
+        transform: translateX(0%);
+        
+    }
+    .navitems-effect::before{
+        background-color: black;        
+    }
+  
+    @keyframes animate {
+
+        to{
+            transform: translateY(0%);
+        }
+    }
+    .navbar .Hamburger{
+        display: inline;
+        flex: 0 1 50px;
+    }
+    .navbar .Hamburger:focus{
+        outline: none;
+    }
+    .navbar .search button{
+        font-size: 0.75rem;
+    }
+   
+}
+.search {
+    position: relative;
+}
+.Search_results{
+    position: absolute;
+    border-radius: 5px;
+    background-color: white;
+    width:100%;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+}
+
+.Search_results a{
+    color: black !important;
+    padding: 0.25rem ;
+    width: 100%;
+}
+.Search_results a:first-child{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.Search_results a:last-child{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.Search_results a:hover{
+    background-color: #5f5f5f;
+}
+@media screen and (max-width:427px){
+    .navbar .search{
+        order: 1;
+    }
+    .navbar ul a{
+        font-size: 1.2rem;
+    }
+}

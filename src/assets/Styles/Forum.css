@@ -1,0 +1,174 @@
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Forum_container{
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    background-color: #131118;
+    flex-direction: column;
+
+}
+.Forum_container .Sections{
+display: grid;
+grid-template-columns: repeat(12,1fr);
+width: 100%;
+grid-column-gap: 1rem;
+}
+.Forum_container .Sections .Section_container:first-child{
+    grid-column: 1/-1;
+}
+
+.Forum_container .Sections .Section_container:last-child{
+    grid-column: 9/-1;
+    grid-row: 2/10;
+
+}
+.Forum_container img{
+    justify-self: center;
+    height: 100%;
+    width: 250px;
+}
+.Section_container{
+    grid-column: 1/9;
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+    background-color:  var(--Background);
+    border:1px solid  #313037;
+    border-radius: 5px;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.Section_container .compo_title{
+    padding: 0.25rem 1rem;
+    width: 100%;
+    background: linear-gradient(120deg, var(--Color)  50%,  var(--Background) 70%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.Section_container .compo_main_title{
+    background: linear-gradient(120deg,  var(--Background) 0%,var(--Color)  50%,  var(--Background) 100%);
+    text-align: center;
+}
+.compo_title_notlink{
+    padding: 0.25rem 1rem;
+    width: 100%;
+    background: linear-gradient(120deg, var(--Color)  50%,  var(--Background) 70%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.compo_title:hover{
+color: #313037;
+}
+.Section_container .Post{
+    padding: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom:1px solid  #313037;
+    justify-content: center;
+}
+.Section_container .Post .Post_Content{
+    flex: 2;
+    display: flex;
+    padding-right:1rem;
+    flex-direction: column;
+}
+.Post_Content p{
+    color: #525658;
+}
+.Post_Content a{
+    margin: 0;
+}
+.Post_Content p b{
+    color:#939799;
+}
+.Post_Content  h4:hover{
+    text-decoration: underline;
+}
+.Section_container .Post .Post_Stats {
+    padding-right:  1rem;
+    flex: 1;
+}
+.Section_container .Post .Poster{
+    flex: 1;
+}
+.Section_container .Post:last-child{
+    border: none;
+}
+.Btn_Section{
+    padding: 1rem 0;
+
+}
+.Btn_Section a{
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border: 1px solid #313037 ;
+    color: rgba(255, 255, 255, 0.404);
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(43, 43, 43) 50%,  #121215 50%);
+    transition: all 0.3s linear;
+    z-index: 0;
+
+}
+.Btn_Section a::before{
+    content: '';
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 110%;
+    opacity: 0;
+    top:-5%;
+    left:-2px;
+    z-index: -1;
+    background: linear-gradient(45deg, var(--Color) 0%, var(--Color2));
+    background-size: 200%;
+    animation: gradient 5s linear infinite;
+    transition: all 0.5s;
+}
+ .Btn_Section a::after{
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 105%;
+    height: 110%;
+    top:-5%;
+    left:-2.5%;
+    z-index: -1;
+    filter: blur(5px);
+    background: linear-gradient(45deg, var(--Color) 0%, var(--Color2));
+    background-size: 200%;
+    animation: gradient 5s linear infinite;
+    transition: all 0.5s;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.Btn_Section a:hover{
+    color: white;
+
+}
+.Btn_Section a:hover::before,.Btn_Section a:hover::after {
+    opacity: 1;
+}
+@media screen and (max-width:600px){
+    .Forum_container .Sections .Section_container,.Forum_container .Sections .Section_container:last-child{
+        grid-column: 1/-1;
+    }
+}

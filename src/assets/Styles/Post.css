@@ -1,0 +1,68 @@
+.Post_Container{
+    background-color:  #131118;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(auto-fit,1fr);
+    width: 100%;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+.Post_Side{
+    margin-left:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-column: 1/2;
+    border-right: 1px solid #313037;
+    height: 100%;
+}
+.Post_Side img{
+    max-width:100% ;
+    max-height: 100%;
+    min-width: 150px;
+}
+.Post_Content{
+    grid-column: 2/-1;
+    color: white;
+}
+.Post_Content .Post_Info{
+display: flex;
+border-bottom: 1px solid #828285  ;
+}
+.Post_Content .Post_Info h5:last-child{
+margin-left: 1rem;
+}
+.Post_Content .Post_Info h5 span{
+    color: #828285;
+}
+.Post_Content .Post{
+    background-color: #121215;
+    border:1px solid  #313037;
+    color: #a0a0a0;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.UrlDocs a{
+color: rgb(0, 153, 255);
+}
+.UrlDocs a:hover{
+    text-decoration: underline;
+}
+.Post iframe{
+    min-height: 300px;
+    margin: 1rem;
+    flex: 1 1 150px;
+}
+@media screen and (max-width:500px){
+.Post_Side{
+    grid-column: 1/-1;
+}
+.Post_Content{
+    grid-column: 1/-1;
+}
+}

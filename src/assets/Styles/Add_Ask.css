@@ -1,0 +1,103 @@
+.Form_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #1a1921;
+    flex-direction: column;
+}
+.Form_Container h2{
+    background: linear-gradient(120deg,#00000000 10%,var(--Color) 50%, #00000000 90%);
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.Form_Container form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+}
+.Form_Container form input{
+    border-radius: 5px;
+    background-color: #121215;
+    border:1px solid  #313037;
+    padding: 0.5rem;
+    color: #a0a0a0;
+    font-size: 1rem;
+    transition: all 0.5s;
+    flex: 1 0 100%;
+}
+.Form_Container form input:focus{
+    outline: none;
+    border:1px solid  var(--Color);
+
+}
+.Form_Container .inputs{
+    display: flex;
+    margin: 1rem 0 0 0;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.Form_Container .inputs label{
+    color: white;
+    margin: 1rem 0;
+
+}
+.Form_Content{
+    margin: 1rem 0 0 0;
+    border:1px solid  var(--Color);
+    padding: 0.5rem;
+    color: #a0a0a0;
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Form_Container  label{
+    color: white;
+    margin-top: 1rem;
+}
+.textarea:focus{
+    outline: none;
+    border:1px solid  #5c5c61;
+}
+.Form_Content button{
+    padding: 0.5rem;
+    background-color: #121215;
+    color: white;
+    border: 1px solid #313037;
+    border-bottom: none;
+    outline: none;
+}
+
+.textarea{
+    background-color: #121215;
+    border:1px solid  #313037;
+    color: #a0a0a0;
+    padding: 0.5rem;
+    resize: none;
+    flex: 1 0 100%;
+    border-radius: 5px;
+    height: 25vh;
+
+}
+.Send{
+    width: 25%;
+    margin: 1rem 0;
+    background: linear-gradient(to bottom, rgb(43, 43, 43) 50%,  #121215 50%);
+    transition: all 0.3s linear;
+    border: 1px solid #0094e900;
+    color: rgba(255, 255, 255, 0.404);
+    align-self: center;
+    padding: 0.5rem 0;
+}
+.Send:hover{
+    color: white;
+    border: 1px solid var(--Color);
+}
+    

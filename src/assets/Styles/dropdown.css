@@ -1,0 +1,102 @@
+.Dropdown{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    z-index: 9999;
+}
+.dropdown_btn{
+    border: 1px solid var(--Color);
+    color: white;
+    padding: 1rem;
+    border-radius:50px ;
+    transition: all 0.5s;
+}
+.dropdown_btn:hover{
+    background-color: var(--Color);
+}
+.Dropdown .checked{
+    display: none;
+}
+.Dropdown .checked:checked ~ .dropdown_btn{
+    color:  #1c1924;
+    background-image: linear-gradient(90deg,  var(--Color) 0%, var(--Color2) 100%);
+
+}
+.Dropdown .checked:checked ~ .Dropdown-menu{
+    transform: scaleY(1);
+
+}
+
+.red:hover{
+    text-shadow: 0px 0px 5px #e90000;
+    background-color: #444444;
+}
+.Dropdown-menu{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: -125%;
+    margin: 0 0.25rem;
+    border-radius: 5px;
+    transform: scaleY(0);
+    transition: transform 0.3s ease-out;
+    background-color: #1f1f1f;
+    color: white !important;
+}
+.Dropdown-menu a,.Dropdown-menu button{
+    display: flex;
+    color: white !important;
+    font-size: 1.25rem !important;
+    padding: 1rem 2rem ;
+    width: 100%;
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(61, 61, 61);
+}
+.Dropdown-menu button:last-child{
+    border: none;
+    color: red !important;
+
+}
+.Dropdown-menu a i{
+    margin-right: 0.5rem;
+}
+.Dropdown-menu a:hover{
+    background-color: #444444;
+}
+#user_quit{
+    align-self: center;
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+    justify-self: center;
+}
+@media screen and (max-width:910px){
+    .Dropdown{
+        position: initial;
+    }
+    .Dropdown-menu{
+        justify-content: center;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        border-radius: 5px;
+        transform: scaleY(0);
+        transition: transform 0.3s ease-out;
+        background-color: #1f1f1f;
+    }
+    #user_quit{
+        display: block;
+    }
+   
+
+}

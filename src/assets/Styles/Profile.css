@@ -1,0 +1,64 @@
+.UserInfoContainer{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,75px) repeat(9,1fr);
+    grid-template-rows: 1fr auto;
+    width: 100%;
+    transition: all 0.5s;
+}
+.Profile_Picture{
+    background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-position: top center;
+    background-size: cover;
+    grid-column: 1/-1;
+    justify-content: center;
+    position: relative;
+    height: 450px;
+    display: flex;
+    background-color: var(--Background);
+    transition: all 0.5s;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.Profile_Picture img{
+    max-width: 100%;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: -50px;
+    transition: all 0.5s;
+}
+.Profile_Picture .Name{
+    position: absolute;
+    bottom: -80px;
+    color: white;
+}
+.UserInfoContainer .UserInfoContent{
+    background-color: var(--Component);
+    grid-column: 1/-1;
+    padding: 1rem;
+    padding-top: 5rem;
+    margin: 0.5rem;
+}
+.UserInfoContent .Info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--Text);
+}
+.UserInfoContent .Info span{
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+@media screen and (max-width:500px){
+.Profile_Picture{
+height: 250px;
+}
+.Profile_Picture img{
+    height: 150px;
+width:150px;
+}
+}

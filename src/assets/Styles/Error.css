@@ -1,0 +1,22 @@
+.Error_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #1c1924;
+}
+.Error_container h1{
+    color: #e10c4a;
+    font-size: 5rem;
+    text-shadow: 0px 0px 10px #e10c4a;
+    text-align: center;
+}
+.Error_container p{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.Error_container a{
+    color: #e10c4a;
+    text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+.navbar .ColorPicker{
+    position: absolute;
+    bottom: -40px;
+    transform:translateX(-85%);
+    transition: transform 0.5s;
+    border: 2px solid var(--Color);
+    border-radius: 50px;
+    padding: 0.25rem;
+    background-color: var(--Component);
+}
+
+.ColorPicker #Colorbtn{
+    display: none;
+}
+.ColorPicker label{
+    margin:0 1rem ;
+    color: var(--Color);
+    cursor: pointer;
+}
